@@ -4,10 +4,12 @@ from PIL import Image
 import io
 from transformers import pipeline
 import matplotlib.pyplot as plt
+css_file = current_dir /"main.css"
 
 
-
-
+# --- LOAD CSS, PDF & PROFIL PIC ---
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 # Split the page into two tabs
 tab1, tab2= st.tabs(["Image Generate App", "Text Generation App"])
