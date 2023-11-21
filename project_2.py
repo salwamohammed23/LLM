@@ -4,9 +4,11 @@ from PIL import Image
 import io
 from transformers import pipeline
 import matplotlib.pyplot as plt
-#css_file = current_dir /"main.css"
 
-# Add custom CSS to hide the GitHub icon
+API_URL = "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4"
+HEADERS = {"Authorization": f"Bearer {'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'}"}
+
+# Add custom CSS to hide the footer, header
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
