@@ -29,7 +29,7 @@ tab1, tab2= st.tabs(["Image Generate App", "Text Generation App"])
 # Image Inference Section
 with tab1:
     st.header("Image Inference")
-    image_url = st.text_input("Enter your keyword:")
+    image_url = st.text_input("Enter English your keyword:")
     if st.button("Generate Image"):
         # API Query
         response = requests.post(API_URL, headers=HEADERS, json={"inputs": image_url})
@@ -42,7 +42,7 @@ with tab1:
 # Text Generation Section
 with tab2:
     st.header("Text Generation")
-    keyword = st.text_input("Enter keyword:")
+    keyword = st.text_input("Enter English keyword:")
     if st.button("Generate Text"):
         # Text Generation Pipeline
         generator = pipeline('text-generation', model='gpt2')
