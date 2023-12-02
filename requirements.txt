@@ -5,3 +5,7 @@ transformers
 matplotlib
 tensorflow
 torch
+langchain
+
+openai
+
